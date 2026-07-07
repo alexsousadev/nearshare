@@ -2,9 +2,7 @@
 
 Este projeto é uma espécie de clone do Snapdrop, criado para fins de aprendizado para demonstrar a transferência direta de arquivos ponto a ponto (P2P) usando **WebRTC Data Channel** e sinalização de rede local (LAN) via **WebSockets**.
 
-Checklist de Evolução do Projeto
-
-Utilize esta lista de tarefas para rastrear o progresso do desenvolvimento do Mini-Snapdrop e saber qual o próximo passo:
+# Checklist de Evolução do Projeto
 
 ### 1. Servidor de Sinalização (Backend)
 - [ ] Configurar servidor HTTP

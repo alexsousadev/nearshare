@@ -1,0 +1,28 @@
+{
+  "name": "nearshare",
+  "version": "1.0.0",
+  "description": "Este projeto é uma espécie de clone do Snapdrop, criado para fins de aprendizado para demonstrar a transferência direta de arquivos ponto a ponto (P2P) usando **WebRTC Data Channel** e sinalização de rede local (LAN) via **WebSockets**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexsousadev/nearshare.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alexsousadev/nearshare/issues"
+  },
+  "homepage": "https://github.com/alexsousadev/nearshare#readme",
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "@types/ws": "^8.18.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "ws": "^8.21.0"
+  }
+}
