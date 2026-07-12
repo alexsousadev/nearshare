@@ -4,7 +4,8 @@
   "description": "Este projeto é uma espécie de clone do Snapdrop, criado para fins de aprendizado para demonstrar a transferência direta de arquivos ponto a ponto (P2P) usando **WebRTC Data Channel** e sinalização de rede local (LAN) via **WebSockets**.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx server/server.ts"
   },
   "repository": {
     "type": "git",
