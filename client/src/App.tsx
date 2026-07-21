@@ -14,11 +14,14 @@ function App() {
       <div>
         <h3>Available devices:</h3>
 
-        {peers.map((peer) => (
-          <button key={peer.id} className="peer-btn">
-            {peer.name}
-          </button>
-        ))}
+        {peers.map((peer) => {
+          console.log(peer)
+          return (
+            <button key={peer.id} className="peer-btn">
+              {peer.name}
+            </button>
+          )
+        })}
       </div>
     </div>
   )

@@ -7,11 +7,12 @@ class Device {
     id: string
     name: string
 
-    constructor(req: IncomingMessage, sock: WebSocket){
+
+    constructor(req: IncomingMessage, sock: WebSocket, name: string){
         this.request = req
         this.connection = sock
         this.id = Math.random().toString(36).substr(2, 9)
-        this.name = this.getName()
+        this.name = name 
     }
 
     getIP(): string {
@@ -22,8 +23,15 @@ class Device {
         return ip || 'unknown';
     }
 
+    setName(){
+
+        
+
+
+    }
+
     getName(): string {
-        return this.id.substring(0, 4)
+        return this.name
     }
     
 }

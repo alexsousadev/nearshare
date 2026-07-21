@@ -10,11 +10,12 @@ export class SocketManager {
     constructor(private roomManager: RoomManager){}
 
     handleConnection(ws: WebSocket, req: IncomingMessage){
-        const device = new Device(req, ws)
-        const ip = device.getIP()
+        const ip = req.socket.remoteAddress
+        if(!ip) return
+        
         const room = this.roomManager.getOrCreateRoom(ip)
+        const device = room.createDevice(ws, req)
 
-        room.addDevice(device)
         this.sendAllDevices(ws, room, device.id)
 
         ws.send(JSON.stringify({
@@ -34,12 +35,9 @@ export class SocketManager {
     }
 
     sendAllDevices(ws: WebSocket, room: Room, currentDeviceId: string){
-        const otherDevices = Array.from(room.devicesList.values())
+        const otherDevices = room.getDevicesList()
             .filter((client) => client.id !== currentDeviceId)
-            .map((client) => ({
-                id: client.id,
-                name: client.name
-            }))
+            .map((client) => ({ id: client.id, name: client.name }))
 
         ws.send(JSON.stringify({ 
             type: MessageType.ALL_DEVICES, 
