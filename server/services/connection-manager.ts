@@ -29,7 +29,7 @@ export class SocketManager {
             name: device.name
         }, device.id)
 
-        ws.on('message', (data)=> this.handleMessage(ip, data, room))
+        ws.on('message', (data)=> this.handleMessage(device.id, data, room))
         ws.on('close', () => this.roomManager.handleDeviceDisconnect(ip, device))
         ws.on('error', (error) => console.error(error))
     }
