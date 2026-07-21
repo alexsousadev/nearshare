@@ -5,16 +5,16 @@ Este projeto é uma espécie de clone do Snapdrop, criado para fins de aprendiza
 # Checklist de Evolução do Projeto
 
 ### 1. Servidor de Sinalização (Backend)
-- [ ] Configurar servidor HTTP
-- [ ] Integrar comunicação WebSocket
-- [ ] Descobrir e agrupar dispositivos pelo endereço IP externo (separar salas por rede local)
-- [ ] Roteamento de mensagens de negociação (Offers, Answers e ICE Candidates)
-- [ ] Limpeza e desconexão de peers ao fechar a conexão
+- [x ] Configurar servidor HTTP
+- [x] Integrar comunicação WebSocket
+- [x] Descobrir e agrupar dispositivos pelo endereço IP externo (separar salas por rede local)
+- [x] Roteamento de mensagens de negociação (Offers, Answers e ICE Candidates)
+- [x] Limpeza e desconexão de peers ao fechar a conexão
 
 ### 2. Interface e Conexões (Frontend)
-- [ ] Gerenciar a conexão WebSocket de sinalização no ciclo de vida
-- [ ] Persistir o socket e as conexões ativas
-- [ ] Renderizar lista de dispositivos ativos na rede local
+- [x] Gerenciar a conexão WebSocket de sinalização no ciclo de vida
+- [x] Persistir o socket e as conexões ativas
+- [x] Renderizar lista de dispositivos ativos na rede local
 - [ ] Implementar fluxo de upload ao clicar em um dispositivo alvo
 
 ### 3. Conexão Direta (WebRTC P2P)
